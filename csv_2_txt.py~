@@ -1,0 +1,10 @@
+
+In = open("Call.csv","r")
+Out = open("Call.txt","w")
+for line in In:
+    v = list(map(int, line.split(',')))
+    for e in v:
+        Out.write("{0} ".format(e))
+    Out.write("\n")
+In.close()
+Out.close()
